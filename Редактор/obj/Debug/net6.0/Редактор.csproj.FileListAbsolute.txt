@@ -1,0 +1,17 @@
+D:\Редактор\Редактор\bin\Debug\net6.0\Редактор.exe
+D:\Редактор\Редактор\bin\Debug\net6.0\Редактор.deps.json
+D:\Редактор\Редактор\bin\Debug\net6.0\Редактор.runtimeconfig.json
+D:\Редактор\Редактор\bin\Debug\net6.0\Редактор.dll
+D:\Редактор\Редактор\bin\Debug\net6.0\Редактор.pdb
+D:\Редактор\Редактор\obj\Debug\net6.0\Редактор.csproj.AssemblyReference.cache
+D:\Редактор\Редактор\obj\Debug\net6.0\Редактор.GeneratedMSBuildEditorConfig.editorconfig
+D:\Редактор\Редактор\obj\Debug\net6.0\Редактор.AssemblyInfoInputs.cache
+D:\Редактор\Редактор\obj\Debug\net6.0\Редактор.AssemblyInfo.cs
+D:\Редактор\Редактор\obj\Debug\net6.0\Редактор.csproj.CoreCompileInputs.cache
+D:\Редактор\Редактор\obj\Debug\net6.0\Редактор.dll
+D:\Редактор\Редактор\obj\Debug\net6.0\refint\Редактор.dll
+D:\Редактор\Редактор\obj\Debug\net6.0\Редактор.pdb
+D:\Редактор\Редактор\obj\Debug\net6.0\Редактор.genruntimeconfig.cache
+D:\Редактор\Редактор\obj\Debug\net6.0\ref\Редактор.dll
+D:\Редактор\Редактор\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Редактор\Редактор\obj\Debug\net6.0\Редактор.csproj.CopyComplete

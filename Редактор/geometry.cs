@@ -15,6 +15,7 @@ namespace Редактор
         public  string Linelength { get; set; }
         public  string width { get; set; }
        private geometry() { }
+
        public geometry(string figures, string linelength, string widths)
         {
             figure = figures;

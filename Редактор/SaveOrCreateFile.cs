@@ -1,17 +1,17 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
 using System.Xml;
+using System.Text.Json;
 
 namespace Редактор
 {
     internal class SaveOrCreateFile
     {
         public static string YUR;
-        public static void Open()
+        public static void Opened()
         {
             Console.WriteLine("Сохранить файл в одном из трёх фрагментов (txt, json, xml) - F1.  Escape - Закрыть программу");
             Console.WriteLine("----------------------------------------------------------------------------------------------");
@@ -25,12 +25,6 @@ namespace Редактор
             {
                 string text = File.ReadAllText(YUR);
                 List<geometry> geometries = JsonConvert.DeserializeObject<List<geometry>>(text);
-                foreach (geometry item in geometries)
-                {
-                    Console.WriteLine(item.figure);
-                    Console.WriteLine(item.Linelength.ToString());
-                    Console.WriteLine(item.width.ToString());
-                }
             }
             else if (extension == ".xml")
             {
@@ -63,7 +57,8 @@ namespace Редактор
             }
             else if (extension == ".json")
             {
-                using StreamWriter sw = File.CreateText(YUR); for (int i = 0; i < Program.geometries.Count; i++)
+                using StreamWriter sw = File.CreateText(YUR); 
+                for (int i = 0; i < Program.geometries.Count; i++)
                 {
                     sw.WriteLine(Program.geometries[i].figure);
                     sw.WriteLine(Program.geometries[i].Linelength.ToString());
@@ -75,12 +70,11 @@ namespace Редактор
             {
                 XmlSerializer xml = new XmlSerializer(Program.geometries.GetType());
                 using FileStream fs = new FileStream(YUR, FileMode.OpenOrCreate);
-                xml.Serialize(fs, Program.geometries); 
+                xml.Serialize(fs, Program.geometries);
             }
             else return false;
             return true;
         }
-       
         private static void Save()
         {
             Console.Clear();
@@ -93,13 +87,15 @@ namespace Редактор
                 Console.WriteLine("Успешно сохранено ! Спасибо, что воспользовались текстовым редактором! ");
             }
             else Console.WriteLine("Файл не удалось сохранить! Попробуйте снова, извините за неудобства {{ (>_<) }}");
-            Program.Close();
+            Program.Exit();
         }
         private static void Button()
         {
             ConsoleKeyInfo button = Console.ReadKey();
-            if (button.Key == ConsoleKey.Escape) Program.Close();
-            else if (button.Key == ConsoleKey.F1) SaveOrCreateFile.Save();
+            if (button.Key == ConsoleKey.Escape)
+                Program.Exit();
+            else if 
+                (button.Key == ConsoleKey.F1) SaveOrCreateFile.Save();
             else
             {
                 Console.Clear();
